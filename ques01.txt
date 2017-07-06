@@ -1,0 +1,15 @@
+Steps to Connect to a database using JDBC
+-----------------------------------------
+
+1. Create a Servlet.
+2. Define below 4 String parameters:
+	- JDBC_DRIVER : The driver name. For MySQL it is 'com.mysql.jdbc.Driver'
+	- DB_URL : The Database URL. For eg, jdbc:mysql://localhost/onlinebooks
+	- USER : Username
+	- PASS : Password
+3. Download jdbc mysql driver and include it in project under -> WebContent > WEB-INF > lib
+4. Inside a try-catch block, register JDBC Driver and create a connection using below :
+	- Class.forName(JDBC_DRIVER);
+	- Connection connection = DriverManager.getConnection(DB_URL, USER, PASS);
+5. Once connection is established, one can create statement and execute query.
+
